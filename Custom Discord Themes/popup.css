@@ -1,0 +1,252 @@
+body{
+  width: 425px;
+  height: 540px;
+  background: rgb(45,45,50);
+  overflow: hidden;
+  margin: 0px;
+}
+
+button {
+  all: unset;
+}
+
+button:focus {
+  outline: revert;
+}
+
+input { all: unset }
+
+@font-face {
+    font-family: 'GGSans'; /*a name to be used later*/
+    src: url('./gg sans Regular.ttf'); /*URL to font*/
+}
+@font-face {
+    font-family: 'GGSans Medium'; /*a name to be used later*/
+    src: url('./gg sans Medium.ttf'); /*URL to font*/
+}
+@font-face {
+    font-family: 'GGSans Semibold'; /*a name to be used later*/
+    src: url('./gg sans Semibold.ttf'); /*URL to font*/
+}
+@font-face {
+    font-family: 'GGSans Bold'; /*a name to be used later*/
+    src: url('./gg sans Bold.ttf'); /*URL to font*/
+}
+
+.colorPicker{
+
+  user-select: none;
+
+}
+
+.currentThemeButton{
+  background: rgb(130,130,130) !important;
+}
+
+.themeButton, .addThemeButton, #themeRemove{
+  width: 150px;
+  height: 35px;
+  margin: 4px;
+  margin-left: 0px;
+  font-family: 'GGSans Medium';
+  background: rgb(90,90,90);
+  color: white;
+  text-align: center;
+  font-size: 15px;
+  border-radius: 5px;
+  transition: all 0.1s;
+  overflow: hidden;
+  text-wrap: nowrap;
+}
+
+.themeButton:active{
+  background: rgb(130,130,130) !important;
+}
+
+.themeButton:hover{
+  background: rgb(115,115,115);
+  cursor: pointer;
+}
+
+#noThemeImage{
+
+  font-family: "GGSans";
+  color: white;
+  font-size: 20px;
+  margin-left: 0px;
+
+}
+
+#themeRemove{
+  background: rgb(210,80,80);
+  margin-left: 0px;
+  margin-top: 0px;
+}
+#themeRemove:enabled:hover{
+  background: rgb(160,40,40);
+  cursor: pointer;
+}
+
+#themeRemove:disabled,
+#themeRemove[disabled]{
+  background: rgb(210,80,80);
+  opacity: 0.5 !important;
+}
+
+#themeRemove:enabled:active{
+  background: rgb(140,20,20) !important;
+}
+
+.addThemeButton:active{
+  background: rgb(60, 70, 200) !important;
+}
+
+.addThemeButton:hover{
+  cursor: pointer;
+  background: rgb(80, 90, 220);
+}
+
+.addThemeButton{
+  height: 30px;
+  background: rgb(100, 110, 240);
+  color: white;
+}
+
+#editorContainer{
+  display: flex;
+  width: 425px;
+  height: 100%;
+}
+
+#themeListTitle{
+  text-align: center;
+  color: white;
+  font-family: 'GGSans Semibold';
+  font-size: 18px;
+}
+
+#themeButtons{
+  height: 100%;
+  width: 170px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(60,60,65) rgba(0,0,0,0);
+  margin-left: 0px;
+  box-shadow: 0 0 10px black;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+#editWindow{
+  margin-left: 20px;
+  padding-top: 10px;
+}
+
+.indicator{
+  color: rgb(230,230,230);
+  font-family: 'GGSans Bold';
+  font-size: 12px;
+  margin-bottom: 3px;
+}
+
+#themeName{
+  background: rgb(30,30,35);
+  padding: 8px;
+  font-family: 'GGSans Medium';
+  color: white;
+  font-size: 15px;
+  border-radius: 6px;
+  transition: all 0.1s;
+  width: 150px;
+}
+
+#themeName:hover{
+  background: rgb(20,20,25);
+}
+
+#themeName:active{
+  background: rgb(10,10,15);
+}
+
+::webkit-scrollbar-button{
+  display:none;
+}
+
+.clr-field, .clr-field button, #themeColor{
+  width: 150px !important;
+  height: 40px;
+  cursor: pointer;
+}
+
+.clr-field button{
+
+}
+
+#themeColor{
+  opacity: 0;
+}
+
+#canEdit{
+  display: flex;
+  flex-direction: column;
+}
+
+#cantEdit{
+  width: 200px;
+}
+
+#fileUpload {
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  padding-top: 10px;
+  margin-left: 0px;
+  margin-top: 0px;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+#themeImagePreview{
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+#themeBlur:disabled{
+
+  opacity: 0.15 !important;
+
+}
+
+#themeBlur {
+  -webkit-appearance: none;
+  width: 150px;
+  height: 10px;
+  background: rgb(80,80,85);
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .1s;
+  transition: opacity .1s;
+  margin-top: 4px;
+}
+
+#themeBlur:enabled:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+#themeBlur::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 20px;
+  border-radius: 3px;
+  background: white;
+}
+
+
+[hidden] { display: none !important; }

@@ -1,0 +1,30 @@
+{
+  "name": "Discord Themes",
+  "description": "Customize the background image and color of your discord client.",
+  "version": "0.1.0",
+  "manifest_version": 3,
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {}
+  },
+  "permissions": ["storage", "unlimitedStorage", "tabs"],
+  "content_scripts": [
+    {
+      "run_at": "document_end",
+      "matches": [
+        "https://discord.com/channels/*"
+      ],
+      "js": [
+        "contentScript.js"
+      ]
+    }
+  ],
+  "background": {
+    "service_worker": "service_worker.js"
+  }
+}
